@@ -1,0 +1,46 @@
+.main-analysis {
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .main-analysis__child {
+    width: 60%;
+    height: 50%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-analysis__done {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: #61c891;
+    box-shadow: 0px 0px 2px 2px #86b29a;
+  }
+  
+  .main-analysis__pending {
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    justify-self: flex-end;
+    background-color: #ff9380;
+    box-shadow: 0px 0px 2px 2px #f1b97d;
+  }
+  
+  #main-analysis__piechart {
+    display: block;
+    grid-column: 1/-1;
+    grid-row: 2/-1;
+    width: 110% !important;
+    justify-self: center;
+    align-self: center;
+    height: 100% !important;
+  }
+  
+  .main-analysis__child__text {
+    color: #fff;
+  }

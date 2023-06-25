@@ -1,0 +1,60 @@
+.main-task {
+    background-color: #fff;
+    height: 100%;
+    overflow-y: scroll;
+    width: 100%;
+    border-radius: 0 0 0 0;
+    box-shadow: 0px 0px 0px 0px #f8e1e1;
+  }
+  
+  .main-task-container {
+    background-color: #fff;
+    border-collapse: collapse;
+    font-size: 1.2rem;
+    min-width: 100%;
+  }
+  
+  .main-task-container th,
+  .main-task-container td {
+    padding: 1em;
+    cursor: pointer;
+  }
+  
+  .main-task-container thead tr {
+    height: 4rem;
+    text-align: left;
+    background-color: #0a598d;
+    color: #fff;
+  }
+  
+  .main-task-container__action {
+    text-align: center;
+  }
+  
+  .main-task-container-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .main-task-container-buttons__delete {
+    accent-color: #fe4545;
+  }
+  
+  .main-task-container-buttons__done {
+    accent-color: #31fa5d;
+  }
+  
+  .scrolling::-webkit-scrollbar {
+    width: 0em;
+  }
+  
+  .scrolling::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 2em;
+  }
+  
+  .scrolling::-webkit-scrollbar-thumb {
+    background-color: #05366b;
+    border-radius: 2em;
+  }

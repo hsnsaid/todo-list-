@@ -1,0 +1,42 @@
+.main-category {
+  background-color: #fff;
+  height: 75%;
+  overflow-y: scroll;
+  border-radius: 5px;
+  min-width: 80%;
+  box-shadow: 1px 1px 8px 3px #f8e1e1;
+}
+
+.main-category-container {
+  background-color: #fff;
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  min-width: 100%;
+}
+
+.main-category-container th,
+.main-category-container td {
+  padding: 1em;
+  cursor: pointer;
+}
+
+.main-category-container thead tr {
+  height: 4rem;
+  text-align: left;
+  background-color: #0a598d;
+  color: #fff;
+}
+
+.scrolling::-webkit-scrollbar {
+  width: 0.7em;
+}
+
+.scrolling::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 2em;
+}
+
+.scrolling::-webkit-scrollbar-thumb {
+  background-color: #05366b;
+  border-radius: 2em;
+}

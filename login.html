@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" media="screen and (max-width:900px)" href="css/style_tablet.css">
+    <link rel="stylesheet" media="screen and (max-width:400px)" href="css/style_mobile.css">
+    <script src="front_scripts/login.js" defer></script>
+    <title>Login Page</title>
+  </head>
+
+  <body>
+    <form method="post" class="form">
+      <h2 class="form__header">Login</h2>
+      <input type="hidden" name="auth" value="login" />
+      <input
+        type="text"
+        name="user"
+        class="form__input"
+        placeholder="Email or Username"
+      />
+      <input
+        type="password"
+        name="password"
+        class="form__input"
+        placeholder="Password"
+      />
+      <p class="form__error hidden">username or password is wrong</p>
+      <input
+        type="submit"
+        name="submit"
+        value="Login"
+        class="form__input submit"
+      />
+      <a href="./signup.html" class="form__auth">sign up</a>
+    </form>
+  </body>
+</html>

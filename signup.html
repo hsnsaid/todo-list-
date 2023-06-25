@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" media="screen and (max-width:900px)" href="css/style_tablet.css">
+    <link rel="stylesheet" media="screen and (max-width:400px)" href="css/style_mobile.css">
+    <script src="front_scripts/login.js" defer></script>
+    <title>Sign Up page</title>
+  </head>
+
+  <body>
+    <form action="back_script/signup.php" method="post" class="form">
+      <h2 class="form__header">Register</h2>
+      <input type="hidden" name="auth" value="register" />
+      <input
+        type="text"
+        name="user"
+        class="form__input"
+        placeholder="Username"
+      />
+      <input
+        type="email"
+        name="email"
+        class="form__input"
+        placeholder="Email"
+      />
+      <input
+        type="password"
+        name="password"
+        class="form__input"
+        placeholder="Password"
+      />
+      <p class="form__error hidden">username or email already used</p>
+      <input
+        type="submit"
+        name="submit"
+        class="form__input submit"
+        value="sign up"
+      />
+      <a href="./login.html" class="form__auth">Login</a>
+    </form>
+  </body>
+</html>
