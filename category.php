@@ -1,23 +1,19 @@
 <?php
-
 session_start();
 if (!(isset($_SESSION) && $_SESSION['active'])){ 
   session_destroy();
   header('Location: ./');
 } 
-
 include 'back_script/db.php';
-
   $html = file_get_contents("templates/__GENERIC__.html", true);
   $link = "<link rel='stylesheet' href='css/category.css'>
     <link rel='stylesheet' media='screen and (max-width:400px)' href='css/category_mobile.css' >
-  ";
-  
+  ";  
   $html = str_replace(['$$link$$', '$$archive$$', '$$script$$', '$$title$$'], [$link, 'checked', '','categories'], $html);
-
-  $query = "SELECT * FROM task WHERE task_id = $_SESSION[user_id] AND task_category= '$_GET[category]' AND status='done' ";
-  $result = $conn->query($query)->fetch_all(MYSQLI_BOTH);
-
+  $result=$pdo->prepare("SELECT * FROM task WHERE task_id = :user_id AND task_category= :category AND status='done' ");
+  $result->bindParam(":user_id",$_SESSION['user_id']);
+  $result->bindParam(":category",$_GET['category']);
+  $result->execute();
   $main_html =
     '<section class="main-category scrolling">
       <table class="main-category-container">
@@ -37,6 +33,5 @@ include 'back_script/db.php';
     </section>';
 
   $final_html = str_replace('$$main$$', $main_html, $html);
-
-  $conn->close();
+  $pdo=null;
   echo $final_html;
